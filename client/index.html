@@ -6,6 +6,31 @@
 
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/app.css">
+
+
+<script >
+
+    function clicked(x)
+    {
+        //background-color: #a9dba9;
+        //border-color: #46a546;
+        x.style.color= "#ffffff";
+        x.style.backgroundColor = "#333333";
+    }
+
+    function normal(x)
+    {
+            document.getElementById("ho").style.color= "#999999";
+            document.getElementById("mov").style.color= "#999999";
+            document.getElementById("ac").style.color= "#999999";
+            document.getElementById("ho").style.backgroundColor= "#1b1b1b"
+            document.getElementById("mov").style.backgroundColor= "#1b1b1b";
+            document.getElementById("ac").style.backgroundColor= "#1b1b1b";
+            clicked(x);
+    }
+
+</script>
+
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -13,14 +38,14 @@
             <div class="container">
                 <a class="brand" href="/">Movie Database</a>
                 <ul class="nav">
-                    <li class="active">
-                        <a href="/">Home</a>
+                    <li >
+                        <a id="ho" href="/" onclick="normal(this)">Home</a>
                     </li>
-                    <li>
-                        <a href="/movies">Movies</a>
+                    <li >
+                        <a id="mov" href="/movies" onclick="normal(this)">Movies</a>
                     </li>
-                    <li>
-                        <a href="/actors">Actors</a>
+                    <li >
+                        <a id="ac" href="/actors" onclick="normal(this)">Actors</a>
                     </li>
                 </ul>
                 <div class="navbar-search pull-right">
