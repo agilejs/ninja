@@ -7,11 +7,17 @@
     <thead>
         <tr>
             <th><a href="" ng-click="predicate = 'title'; reverse=!reverse">Title</a></th>
+            <th><a href="" ng-click="predicate = 'year'; reverse=!reverse">Year</a></th>
         </tr>
         <tr ng-repeat="movie in movies | orderBy:predicate:reverse">
             <td>
                 <a href="#" ng-href="/movies/{{movie.id}}">
                     {{movie.title}}
+                </a>
+            </td>
+            <td>
+                <a href="#" ng-href="/movies/{{movie.id}}" >
+                    {{movie.year}}
                 </a>
             </td>
         </tr>
